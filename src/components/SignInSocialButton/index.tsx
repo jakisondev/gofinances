@@ -16,17 +16,19 @@ interface Props extends RectButtonProps {
 
 export function SignInSocialButton({
     title,
-    svg:Svg,
+    svg: Svg,
     ...rest
 }: Props) {
     return (
-        <Button >
+        <Button
+            {...rest}
+        >
             <ImageContainer>
-                <Svg/>
+                <Svg />
             </ImageContainer>
             <Text>
                 {title}
             </Text>
-            </Button>
+        </Button>
     )
 }
